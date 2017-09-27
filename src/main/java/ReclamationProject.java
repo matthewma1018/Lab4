@@ -13,9 +13,9 @@
 public class ReclamationProject {
         /**
          *
-         * @param a The string
-         * @param b The string
-         * @return The substring which both strings possess
+         * @param a The given string
+         * @param b The given string
+         * @return The substring which both strings have in common
          */
     static String doit(final String a, final String b) {
         String s1 = a;
