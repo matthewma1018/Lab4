@@ -7,20 +7,37 @@
  * 4. Add comments and Javadoc comments where needed
  * 5. Remove unnecessary comments as appropriate
  */
-
-public class ReclamationProject
-{
-    static String doit(String a,String b){
-        if (a.length() > b.length()){
-            String c = a; // TODO: set c to a
-            a=b; b=c;}
-        String r = (a.equals(b)) ? "" : ""; // I love the ternary operator!
+/**
+ * a method to find the common substring.
+ */
+public class ReclamationProject {
+        /**
+         *
+         * @param a The string
+         * @param b The string
+         * @return The substring which both strings possess
+         */
+    static String doit(final String a, final String b) {
+        String s1 = a;
+        String s2 = b;
+        if (s1.length() > s2.length()) {
+            String c = s1;
+            s1 = s2;
+            s2 = c;
+        }
+        String r = "";
         /*
          * For loop with i
          */
-        for (int i = 0; i < a.length(); i++) { for (int j = a.length() - i; j > 0; j--) {
-                for (int k = 0; k < b.length()- j; k++) {
-                    r = (a.regionMatches(i, b, k, j) && j >r.length()) ? a.substring(i,i + j) : r; // Do it!
-                        }} // Ah yeah
-        } return r; }
+        for (int i = 0; i < s1.length(); i++) {
+            for (int j = s1.length() - i; j > 0; j--) {
+                for (int k = 0; k < s2.length() - j; k++) {
+                    if (s1.regionMatches(i, s2, k, j) && j > r.length()) {
+                        r = s1.substring(i, i + j);
+                    }
+                }
+            }
+        }
+        return r;
+        }
 }
