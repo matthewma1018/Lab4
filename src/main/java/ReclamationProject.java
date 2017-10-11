@@ -13,8 +13,8 @@
 public class ReclamationProject {
         /**
          *
-         * @param a The given string
-         * @param b The given string
+         * @param a a given string
+         * @param b a given string
          * @return The substring which both strings have in common
          */
     static String doit(final String a, final String b) {
@@ -39,5 +39,5 @@ public class ReclamationProject {
             }
         }
         return r;
-        }
+    }
 }
